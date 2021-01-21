@@ -10,7 +10,7 @@ client.messages
     .create({
         body: "I found you...",
         from: process.env.MY_PHONE_NUMBER,
-        to: "+15558675310",
+        to: process.env.PHONE_NUMBER_TO,
     })
     .then((message) => console.log(message.sid))
     .catch((err) => console.log(err));
